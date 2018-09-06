@@ -1,0 +1,33 @@
+With normal user:
+
+If repository is empty.
+
+$ mkdir REPO
+$ cd REPO
+$ touch README.md
+$ git init
+$ git add README.md
+$ git commit -m "Message to be public displayed"
+$ git remote add origin git@github.com:USER/REPO.git
+$ git push -u origin master
+
+If repository has files
+
+$ git clone git@github.com:USER/REPO.git
+$ git add README.md
+$ git commit -m "Message to be public displayed"
+$ git push -u origin master
+
+WARNING: this is important and should be set in the machines
+git config --global user.email "me@somewhere.ooo"
+git config --global user.name "My Name"
+
+To verify the changes use the same commands as above without the values:
+git config --global user.email
+git config --global user.name
+
+To erase the previous configs:
+git config --global --unset user.email
+git config --global --unset user.name
+
+git rm file1 file2 ... fileN
